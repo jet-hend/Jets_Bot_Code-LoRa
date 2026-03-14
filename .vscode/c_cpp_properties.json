@@ -4,7 +4,8 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/include/ctre/phoenix/cci"
+                "${workspaceFolder}/include/ctre/phoenix/cci",
+                "${workspaceFolder}/include/subsystems"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",

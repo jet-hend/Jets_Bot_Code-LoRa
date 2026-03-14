@@ -1,3 +1,0 @@
-/home/jjh/Bot_Code/build/CMakeFiles/ROBOTEX.dir
-/home/jjh/Bot_Code/build/CMakeFiles/edit_cache.dir
-/home/jjh/Bot_Code/build/CMakeFiles/rebuild_cache.dir

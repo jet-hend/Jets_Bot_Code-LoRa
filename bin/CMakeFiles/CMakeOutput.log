@@ -173,3 +173,38 @@ int main(void)
 }
 
 
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD succeeded with the following output:
+Change Dir: /home/jjh/Bot_Code/build/CMakeFiles/CMakeScratch/TryCompile-BEakHs
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_f6468/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_f6468.dir/build.make CMakeFiles/cmTC_f6468.dir/build
+gmake[1]: Entering directory '/home/jjh/Bot_Code/build/CMakeFiles/CMakeScratch/TryCompile-BEakHs'
+Building C object CMakeFiles/cmTC_f6468.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_f6468.dir/src.c.o -c /home/jjh/Bot_Code/build/CMakeFiles/CMakeScratch/TryCompile-BEakHs/src.c
+Linking C executable cmTC_f6468
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f6468.dir/link.txt --verbose=1
+/usr/bin/cc -rdynamic CMakeFiles/cmTC_f6468.dir/src.c.o -o cmTC_f6468 
+gmake[1]: Leaving directory '/home/jjh/Bot_Code/build/CMakeFiles/CMakeScratch/TryCompile-BEakHs'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+
