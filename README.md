@@ -1,7 +1,7 @@
 Jets_Bot_Code-LoRa
 ==================
 
-Long-range LoRa remote control for a home-built robot.
+# Long-range LoRa remote control for a home-built robot.
 
 Overview
 --------
@@ -46,12 +46,13 @@ Setup Instructions (Raspberry Pi 4)
    git clone https://github.com/jet-hend/Jets_Bot_Code-LoRa.git
    cd Jets_Bot_Code-LoRa
 
-2. Bring up CAN interface (USB-CAN adapter connected)
+ 2. Bring up CAN interface (USB-CAN adapter connected)
    sudo ip link set can0 down
    sudo ip link set can0 up type can bitrate 1000000
-   # Alternative: sudo ./canableStart.sh (if present)
-   # Verify: ip link show can0   → should show state UP
-   # Test:   candump can0        → expect periodic motor controller frames
+
+   Alternative: sudo ./canableStart.sh (if present)
+   Verify: ip link show can0   → should show state UP
+   Test:   candump can0        → expect periodic motor controller frames
 
 3. Build
    mkdir build && cd build
