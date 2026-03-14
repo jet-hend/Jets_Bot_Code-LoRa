@@ -43,25 +43,25 @@ sudo apt install git cmake build-essential can-utils libboost-all-dev -y
 Setup Instructions (Raspberry Pi 4)
 -----------------------------------
 1. Clone repo
-   git clone https://github.com/jet-hend/Jets_Bot_Code-LoRa.git
-   cd Jets_Bot_Code-LoRa
+   'git clone https://github.com/jet-hend/Jets_Bot_Code-LoRa.git
+   cd Jets_Bot_Code-LoRa'
 
  2. Bring up CAN interface (USB-CAN adapter connected)
-   sudo ip link set can0 down
-   sudo ip link set can0 up type can bitrate 1000000
+   'sudo ip link set can0 down
+   sudo ip link set can0 up type can bitrate 1000000'
 
-   Alternative: sudo ./canableStart.sh (if present)
-   Verify: ip link show can0   → should show state UP
-   Test:   candump can0        → expect periodic motor controller frames
+   Alternative: 'sudo ./canableStart.sh' (if present)
+   Verify: 'ip link show can0'   → should show state UP
+   Test:   'candump can0'        → expect periodic motor controller frames
 
-3. Build
+3. 'Build
    mkdir build && cd build
    cmake ..
-   make -j4
+   make -j4'
 
 4. Run
-   sudo ./robot
-   # Listens for packets from receiver ESP32 on /dev/ttyUSB*
+   'sudo ./robot'
+   Listens for packets from receiver ESP32 on /dev/ttyUSB*
 
 ESP32 Upload (Arduino IDE)
 --------------------------
