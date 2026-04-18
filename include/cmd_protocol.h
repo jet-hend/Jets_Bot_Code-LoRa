@@ -1,73 +1,75 @@
 #pragma once
 
-#include <cstdint> // For uint8_t and int16_t
+#include <cstdint> /// @brief  For uint8_t and int16_t
 
-// Enum for different commands
+/// @brief  Enum for different commands
 enum RobotCommandType : uint8_t {
-    //command for doing a controlled stop of the robot, cutting power to the drives
+    /// @brief command for doing a controlled stop of the robot, cutting power to the drives
     CSTOP_Command = 0x01,
-    //command for Emergency stoping the robot, cutting power to drives.
+    /// @brief command for Emergency stoping the robot, cutting power to drives.
     ESTOP_Command = 0x02,
-    //command for moving the robot
+    /// @brief command for moving the robot
     MOVE_Command = 0x03, 
-    //command for controling the relays.
+    /// @brief command for controling the relays.
     RELAY_Command = 0x04,
-    //commands that can change settings or manually control a system.
+    /// @brief commands that can change settings or manually control a system.
     SYSTEM_Command = 0x05,
-    //commands that requests the status of the robot.
+    /// @brief commands that requests the status of the robot.
     AUTO_Command = 0x06,
+    /// @brief commands that requests the radio to perform an action
+    RADIO_Command = 0x07
 };
 
-// Enum for movement cmd types
+/// @brief  Enum for movement cmd types
 enum MoveCMDType : uint8_t {
-    // Drive cmds
-    //sets drive motors to 0 and breaks
+    /// @brief  Drive cmds
+    /// @brief sets drive motors to 0 and breaks
     STOP_Command = 0x01,
-    //sets the robot to drive a calculated distance Forward using the encoders and MPU6050
+    /// @brief sets the robot to drive a calculated distance Forward using the encoders and MPU6050
     DIR_FORWARD = 0x02,
-    //sets the robot to drive a calculated distance Backward using the encoders and MPU6050
+    /// @brief sets the robot to drive a calculated distance Backward using the encoders and MPU6050
     DIR_BACKWARD = 0x03,
-    //sets the robot to turn to the Right to a calculated angle using the encoders and MPU6050
+    /// @brief sets the robot to turn to the Right to a calculated angle using the encoders and MPU6050
     DIR_TURN_RIGHT = 0x04,
-    //sets the robot to turn to the Left to a calculated angle using the encoders and MPU6050
+    /// @brief sets the robot to turn to the Left to a calculated angle using the encoders and MPU6050
     DIR_TURN_LEFT = 0x05,
-    // Tank drive setting two values to set the left and right motors to
+    /// @brief  Tank drive setting two values to set the left and right motors to
     DIR_TANK = 0x06,
-    //set the global max Velocity
+    /// @brief set the global max Velocity
     MAX_VEL = 0x07,
-    //set the trim value for the left and right motors ()
+    /// @brief set the trim value for the left and right motors ()
     TRIM_VAL = 0x08,
     
 };
 
-// Enum for relay cmd types
+/// @brief  Enum for relay cmd types
 enum RelayCMDType : uint8_t {
-    //sets all relays to closed
+    /// @brief sets all relays to closed
     ALL_Closed = 0x01,
-    //sets all relays to open
+    /// @brief sets all relays to open
     ALL_Open = 0x02,
-    //sets a single relay's state
+    /// @brief sets a single relay's state
     Relay_Num = 0x03,
 };
 
-// Enum for system cmd types
+/// @brief  Enum for system cmd types
 enum SystemCMDType : uint8_t {
-    //
+    /// @brief 
     RadioRST = 0x01,
-    //
+    /// @brief 
     CANBusRST = 0x02,
-    //Clicks all 
+    /// @brief Clicks all 
     RelayCLKTest = 0x03,
-    //Blinks both motor controllers to verify comms with CAN0
+    /// @brief Blinks both motor controllers to verify comms with CAN0
     MotorControllerBLINK = 0x04,
-    //resets and calibrates the gyro
+    /// @brief resets and calibrates the gyro
     GYRORST = 0x05,
-    //resets the motor encoders to zero
+    /// @brief resets the motor encoders to zero
     EncoderRST=0x06,
 };
 
 
-// Structure for a command packet
+/// @brief  Structure for a command packet
 struct CommandPacket {
     uint8_t deviceID;
     uint8_t command;
@@ -77,13 +79,22 @@ struct CommandPacket {
 };
 
 struct LoRaFrame {
-    uint8_t  magic;       // Always 0xA5 - quick garbage filter
-    uint8_t  pktType;     // 0x01=Command, 0x81=Response/Ack, 0x02=Periodic status, 0x03=Heartbeat
-    uint8_t  deviceID;    // 0x11 - your robot/base ID
-    uint8_t  seq;         // 0-255 rolling sequence number
-    uint16_t cmdStatus;   // 16-bit command or status code (expandable)
-    int16_t  value1;      // Signed primary value (distance, speed, heading, etc.)
-    int16_t  value2;      // Signed secondary value (tank right %, battery %, etc.)
-    uint8_t  flags;       // Bitfield: bit0=wants ACK, bit1=urgent/live, etc.
-    uint8_t  crc;         // CRC-8 over bytes 0-10
+    /// @brief  Always 0xA5 - quick garbage filter
+    uint8_t  magic;       
+    /// @brief  0x01=Command, 0x81=Response/Ack, 0x02=Periodic status, 0x03=Heartbeat
+    uint8_t  pktType;     
+    /// @brief  0x11 - your robot/base ID
+    uint8_t  deviceID;    
+    /// @brief  0-255 rolling sequence number
+    uint8_t  seq;         
+    /// @brief  16-bit command or status code (expandable)
+    uint16_t cmdStatus;   
+    /// @brief  Signed primary value (distance, speed, heading, etc.)
+    int16_t  value1;      
+    /// @brief  Signed secondary value (tank right %, battery %, etc.)
+    int16_t  value2;      
+    /// @brief  Bitfield: bit0=wants ACK, bit1=urgent/live, etc.
+    uint8_t  flags;       
+    /// @brief  CRC-8 over bytes 0-10
+    uint8_t  crc;         
 };

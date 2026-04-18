@@ -25,7 +25,7 @@ ESPRadio::ESPRadio(boost::asio::io_context& io_context, const std::string& seria
     
     // Configure the serial port
     serial_port_.set_option(boost::asio::serial_port_base::baud_rate(baud_rate));
-    serial_port_.set_option(boost::asio::serial_port_base::character_size(8));
+    serial_port_.set_option(boost::asio::serial_port_base::character_size(12));
     serial_port_.set_option(boost::asio::serial_port_base::parity(boost::asio::serial_port_base::parity::none));
     serial_port_.set_option(boost::asio::serial_port_base::stop_bits(boost::asio::serial_port_base::stop_bits::one));
     serial_port_.set_option(boost::asio::serial_port_base::flow_control(boost::asio::serial_port_base::flow_control::none));
