@@ -1,9 +1,34 @@
 {
-    "files.watcherExclude": {
-        "**/build/**": true,
-        "**/.git/objects/**": true
-    },
-    "cmake.buildDirectory": "${workspaceFolder}/build",
-    "cmake.configureOnOpen": true,
-    "C_Cpp.intelliSenseEngine": "default"
+  "cmake.buildDirectory": "${workspaceFolder}/build",
+  "cmake.generator": "Unix Makefiles",
+  "cmake.configureSettings": {
+    "CMAKE_BUILD_TYPE": "Debug",
+    "CMAKE_EXPORT_COMPILE_COMMANDS": true
+  },
+  
+  "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+  "C_Cpp.intelliSenseEngine": "default",
+  "C_Cpp.errorSquiggles": "enabled",
+  
+  // Make IntelliSense faster and more accurate
+  "C_Cpp.autocomplete": "default",
+  "C_Cpp.formatting": "clangFormat",
+  
+  // Build & Run shortcuts
+  "cmake.buildBeforeLaunch": true,
+  
+  // Terminal settings (helpful on Pi)
+  "terminal.integrated.defaultProfile.linux": "bash",
+  "terminal.integrated.shellIntegration.enabled": true,
+  
+  // Useful for robotics
+  "files.associations": {
+    "*.ino": "cpp"
+  },
+  
+  // Exclude build artifacts
+  "files.exclude": {
+    "build/": true,
+    "**/.git": true
+  }
 }

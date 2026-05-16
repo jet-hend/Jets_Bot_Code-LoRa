@@ -1,0 +1,21 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Jets Bot",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/Jets_Bot",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "setupCommands": [
+        { "text": "-enable-pretty-printing" }
+      ],
+      "preLaunchTask": "Build Project"
+    }
+  ]
+}

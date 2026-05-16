@@ -1,3 +1,11 @@
 #!/bin/bash
+echo "=== Starting Jets Bot ==="
 
-LD_LIBRARY_PATH=./bin ./bin/ROBOTEX
+BINARY="./build/bin/Jets_Bot"
+
+if [ -f "$BINARY" ]; then
+    sudo $BINARY
+else
+    echo "❌ Binary not found! Run ./build.sh first."
+    exit 1
+fi

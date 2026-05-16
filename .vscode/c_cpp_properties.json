@@ -1,15 +1,22 @@
 {
     "configurations": [
         {
-            "name": "Linux-Pi",
+            "name": "Linux (Raspberry Pi)",
+            "compilerPath": "/usr/bin/g++",
+            "cStandard": "gnu17",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "linux-gcc-arm",
+            "compileCommands": "${workspaceFolder}/build/compile_commands.json",
             "includePath": [
                 "${workspaceFolder}/**",
                 "/usr/include",
-                "/usr/local/include"
+                "/usr/local/include",
+                "${workspaceFolder}/include"
             ],
-            "configurationProvider": "ms-vscode.cmake-tools",
-            "cStandard": "c17",
-            "cppStandard": "c++17"
+            "defines": [
+                "BOOST_ASIO_STANDALONE"
+            ],
+            "configurationProvider": "ms-vscode.cmake-tools"
         }
     ],
     "version": 4
