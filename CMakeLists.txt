@@ -14,16 +14,14 @@ find_package(Boost REQUIRED COMPONENTS system)
 
 include_directories(${PROJECT_SOURCE_DIR}/include)
 
-# === Source files (explicit for now) ===
-add_executable(Jets_Bot 
-    main.cpp
-    subsystems/drivetrain.cpp
-    subsystems/ESPRadio.cpp
-    subsystems/relayBoard.cpp
-    subsystems/customCANutil.cpp
-    subsystems/MPU6050util.cpp
-    commands/MOVE_CMD/driveCMDs.cpp
+# Use GLOB so you don't have to list every file manually
+file(GLOB_RECURSE SOURCES 
+    "${PROJECT_SOURCE_DIR}/main.cpp"
+    "${PROJECT_SOURCE_DIR}/subsystems/*.cpp"
+    "${PROJECT_SOURCE_DIR}/commands/*.cpp"
 )
+
+add_executable(Jets_Bot ${SOURCES})
 
 target_link_libraries(Jets_Bot 
     PRIVATE
@@ -33,7 +31,7 @@ target_link_libraries(Jets_Bot
         i2c
 )
 
-# Phoenix CTRE Libraries
+# Phoenix Libraries
 if(CMAKE_LIBRARY_ARCHITECTURE MATCHES "arm")
     set(PHOENIX_LIBS_DIR ${CMAKE_SOURCE_DIR}/lib/arm32)
 else()
@@ -51,7 +49,6 @@ add_custom_command(TARGET Jets_Bot POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_directory
         ${PHOENIX_LIBS_DIR}
         $<TARGET_FILE_DIR:Jets_Bot>
-    COMMENT "Copying Phoenix libraries"
 )
 
-message(STATUS "✅ Jets_Bot configured successfully")
+message(STATUS "✅ Jets_Bot configured")
