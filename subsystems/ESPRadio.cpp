@@ -1,77 +1,100 @@
 #include "subsystems/ESPRaido.h"
-#include <iostream>
-#include <vector>
-#include <cstring>
-#include <fcntl.h>      // For fcntl()
-#include <sys/ioctl.h>  // For FIONREAD
-#include <unistd.h>     // For close(), read()
-#include <errno.h>      // For errno
-#include <string.h>     // For strerror()
 
-// Function to print the contents of the received packet
-void printPacket(const CommandPacket& packet) {
-    std::cout << "--- Received Packet ---" << std::endl;
-    std::cout << "Device ID: 0x" << std::hex << (int)packet.deviceID << std::endl;
-    std::cout << "Command: 0x" << std::hex << (int)packet.command << std::endl;
-    std::cout << "Type: 0x" << std::hex << (int)packet.type << std::endl;
-    std::cout << "Value 1: " << std::dec << packet.value1 << std::endl;
-    std::cout << "Value 2: " << std::dec << packet.value2 << std::endl;
-    std::cout << "-----------------------" << std::endl;
+#include <algorithm>
+#include <cstring>
+#include <errno.h>
+#include <fcntl.h>
+#include <iostream>
+#include <string.h>
+#include <sys/ioctl.h>
+#include <unistd.h>
+#include <vector>
+
+void printLoRaFrame(const LoRaFrame& frame) {
+    std::cout << "--- LoRa Frame ---\n"
+              << "  pkt=0x" << std::hex << static_cast<int>(loraHeaderPktType(frame.header))
+              << " dev=0x" << static_cast<int>(loraHeaderDeviceId(frame.header))
+              << " cmd=0x" << static_cast<int>(frame.command) << " seq=" << std::dec
+              << static_cast<int>(loraSeq(frame)) << " ack=" << loraWantsAck(frame)
+              << " urgent=" << loraIsUrgent(frame) << "\n"
+              << "  v1=" << frame.value1 << " v2=" << frame.value2 << "\n"
+              << "------------------\n";
 }
 
-// Class method implementations
+void printPacket(const CommandPacket& packet) {
+    std::cout << "--- Legacy Packet ---\n"
+              << "  dev=0x" << std::hex << static_cast<int>(packet.deviceID) << " cmd=0x"
+              << static_cast<int>(packet.command) << " type=0x" << static_cast<int>(packet.type) << std::dec
+              << "\n  v1=" << packet.value1 << " v2=" << packet.value2 << "\n"
+              << "---------------------\n";
+}
+
 ESPRadio::ESPRadio(boost::asio::io_context& io_context, const std::string& serial_port, unsigned int baud_rate)
     : io_context_(io_context), serial_port_(io_context, serial_port), buffer_() {
-    
-    // Configure the serial port
     serial_port_.set_option(boost::asio::serial_port_base::baud_rate(baud_rate));
-    serial_port_.set_option(boost::asio::serial_port_base::character_size(12));
+    serial_port_.set_option(boost::asio::serial_port_base::character_size(8));
     serial_port_.set_option(boost::asio::serial_port_base::parity(boost::asio::serial_port_base::parity::none));
     serial_port_.set_option(boost::asio::serial_port_base::stop_bits(boost::asio::serial_port_base::stop_bits::one));
     serial_port_.set_option(boost::asio::serial_port_base::flow_control(boost::asio::serial_port_base::flow_control::none));
 
-    // CRITICAL: Set the serial port to non-blocking mode.
-    int fd = serial_port_.native_handle();
+    const int fd = serial_port_.native_handle();
     if (fd != -1) {
-        int flags = fcntl(fd, F_GETFL);
+        const int flags = fcntl(fd, F_GETFL);
         if (flags == -1 || fcntl(fd, F_SETFL, flags | O_NONBLOCK) == -1) {
-            std::cerr << "Failed to set serial port to non-blocking mode." << std::endl;
+            std::cerr << "Failed to set serial port to non-blocking mode.\n";
         }
     } else {
-        std::cerr << "Failed to get native handle for serial port." << std::endl;
+        std::cerr << "Failed to get native handle for serial port.\n";
+    }
+}
+
+bool ESPRadio::readFrame(LoRaFrame& frame) {
+    try {
+        const int fd = serial_port_.native_handle();
+        std::vector<uint8_t> temp(256);
+
+        const ssize_t bytes_read = read(fd, temp.data(), temp.size());
+        if (bytes_read > 0) {
+            buffer_.insert(buffer_.end(), temp.begin(), temp.begin() + bytes_read);
+        } else if (bytes_read == -1 && errno != EAGAIN && errno != EWOULDBLOCK) {
+            std::cerr << "Serial read error: " << strerror(errno) << "\n";
+            return false;
+        }
+
+        while (buffer_.size() >= LORA_FRAME_SIZE) {
+            const auto magicIt = std::find(buffer_.begin(), buffer_.end(), LORA_MAGIC);
+            if (magicIt == buffer_.end()) {
+                buffer_.clear();
+                return false;
+            }
+            if (magicIt != buffer_.begin()) {
+                buffer_.erase(buffer_.begin(), magicIt);
+            }
+            if (buffer_.size() < LORA_FRAME_SIZE) {
+                return false;
+            }
+
+            std::memcpy(&frame, buffer_.data(), LORA_FRAME_SIZE);
+            buffer_.erase(buffer_.begin(), buffer_.begin() + LORA_FRAME_SIZE);
+            return true;
+        }
+
+        return false;
+    } catch (const std::exception& e) {
+        std::cerr << "readFrame: " << e.what() << "\n";
+        return false;
     }
 }
 
 bool ESPRadio::readPacket(CommandPacket& packet) {
-    // We now use the proven C-style read() call.
-    try {
-        int fd = serial_port_.native_handle();
-        std::vector<uint8_t> temp_read_buffer(256);
-        
-        ssize_t bytes_read = read(fd, temp_read_buffer.data(), temp_read_buffer.size());
-        
-        if (bytes_read > 0) {
-            buffer_.insert(buffer_.end(), temp_read_buffer.begin(), temp_read_buffer.begin() + bytes_read);
-        } else if (bytes_read == -1) {
-            // Check if the error is due to no data available.
-            if (errno != EAGAIN && errno != EWOULDBLOCK) {
-                std::cerr << "Error reading from serial port: " << strerror(errno) << std::endl;
-                return false;
-            }
-        }
-        
-        // Now, check if our internal buffer contains a full packet.
-        if (buffer_.size() >= sizeof(CommandPacket)) {
-            std::memcpy(&packet, buffer_.data(), sizeof(CommandPacket));
-            buffer_.erase(buffer_.begin(), buffer_.begin() + sizeof(CommandPacket));
-            return true;
-        }
-
-        // Not enough data for a full packet yet, or no data was read.
-        return false;
-
-    } catch (const std::exception& e) {
-        std::cerr << "Error in readPacket: " << e.what() << std::endl;
+    LoRaFrame frame{};
+    if (!readFrame(frame)) {
         return false;
     }
+    packet.deviceID = loraHeaderDeviceId(frame.header);
+    packet.command = loraHeaderPktType(frame.header);
+    packet.type = frame.command;
+    packet.value1 = frame.value1;
+    packet.value2 = frame.value2;
+    return true;
 }

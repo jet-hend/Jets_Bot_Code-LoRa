@@ -153,6 +153,54 @@ commands/MOVE_CMD/driveCMDs.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Jets_Bot.dir/build.make CMakeFiles/Jets_Bot.dir/commands/MOVE_CMD/driveCMDs.cpp.s
 .PHONY : commands/MOVE_CMD/driveCMDs.cpp.s
 
+commands/lora_command_handler.o: commands/lora_command_handler.cpp.o
+.PHONY : commands/lora_command_handler.o
+
+# target to build an object file
+commands/lora_command_handler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Jets_Bot.dir/build.make CMakeFiles/Jets_Bot.dir/commands/lora_command_handler.cpp.o
+.PHONY : commands/lora_command_handler.cpp.o
+
+commands/lora_command_handler.i: commands/lora_command_handler.cpp.i
+.PHONY : commands/lora_command_handler.i
+
+# target to preprocess a source file
+commands/lora_command_handler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Jets_Bot.dir/build.make CMakeFiles/Jets_Bot.dir/commands/lora_command_handler.cpp.i
+.PHONY : commands/lora_command_handler.cpp.i
+
+commands/lora_command_handler.s: commands/lora_command_handler.cpp.s
+.PHONY : commands/lora_command_handler.s
+
+# target to generate assembly for a file
+commands/lora_command_handler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Jets_Bot.dir/build.make CMakeFiles/Jets_Bot.dir/commands/lora_command_handler.cpp.s
+.PHONY : commands/lora_command_handler.cpp.s
+
+commands/lora_frame.o: commands/lora_frame.cpp.o
+.PHONY : commands/lora_frame.o
+
+# target to build an object file
+commands/lora_frame.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Jets_Bot.dir/build.make CMakeFiles/Jets_Bot.dir/commands/lora_frame.cpp.o
+.PHONY : commands/lora_frame.cpp.o
+
+commands/lora_frame.i: commands/lora_frame.cpp.i
+.PHONY : commands/lora_frame.i
+
+# target to preprocess a source file
+commands/lora_frame.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Jets_Bot.dir/build.make CMakeFiles/Jets_Bot.dir/commands/lora_frame.cpp.i
+.PHONY : commands/lora_frame.cpp.i
+
+commands/lora_frame.s: commands/lora_frame.cpp.s
+.PHONY : commands/lora_frame.s
+
+# target to generate assembly for a file
+commands/lora_frame.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Jets_Bot.dir/build.make CMakeFiles/Jets_Bot.dir/commands/lora_frame.cpp.s
+.PHONY : commands/lora_frame.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -309,6 +357,12 @@ help:
 	@echo "... commands/MOVE_CMD/driveCMDs.o"
 	@echo "... commands/MOVE_CMD/driveCMDs.i"
 	@echo "... commands/MOVE_CMD/driveCMDs.s"
+	@echo "... commands/lora_command_handler.o"
+	@echo "... commands/lora_command_handler.i"
+	@echo "... commands/lora_command_handler.s"
+	@echo "... commands/lora_frame.o"
+	@echo "... commands/lora_frame.i"
+	@echo "... commands/lora_frame.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -1,6 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Jets_Bot.dir/commands/MOVE_CMD/driveCMDs.cpp.o"
   "CMakeFiles/Jets_Bot.dir/commands/MOVE_CMD/driveCMDs.cpp.o.d"
+  "CMakeFiles/Jets_Bot.dir/commands/lora_command_handler.cpp.o"
+  "CMakeFiles/Jets_Bot.dir/commands/lora_command_handler.cpp.o.d"
+  "CMakeFiles/Jets_Bot.dir/commands/lora_frame.cpp.o"
+  "CMakeFiles/Jets_Bot.dir/commands/lora_frame.cpp.o.d"
   "CMakeFiles/Jets_Bot.dir/main.cpp.o"
   "CMakeFiles/Jets_Bot.dir/main.cpp.o.d"
   "CMakeFiles/Jets_Bot.dir/subsystems/ESPRadio.cpp.o"

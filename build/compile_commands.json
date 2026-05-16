@@ -1,11 +1,6 @@
 [
 {
   "directory": "/home/jjh/Bot_Code/build",
-  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK -I/home/jjh/Bot_Code/include -I/home/jjh/Bot_Code -g -std=c++17 -o CMakeFiles/Jets_Bot.dir/commands/MOVE_CMD/driveCMDs.cpp.o -c /home/jjh/Bot_Code/commands/MOVE_CMD/driveCMDs.cpp",
-  "file": "/home/jjh/Bot_Code/commands/MOVE_CMD/driveCMDs.cpp"
-},
-{
-  "directory": "/home/jjh/Bot_Code/build",
   "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK -I/home/jjh/Bot_Code/include -I/home/jjh/Bot_Code -g -std=c++17 -o CMakeFiles/Jets_Bot.dir/main.cpp.o -c /home/jjh/Bot_Code/main.cpp",
   "file": "/home/jjh/Bot_Code/main.cpp"
 },
@@ -33,5 +28,20 @@
   "directory": "/home/jjh/Bot_Code/build",
   "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK -I/home/jjh/Bot_Code/include -I/home/jjh/Bot_Code -g -std=c++17 -o CMakeFiles/Jets_Bot.dir/subsystems/relayBoard.cpp.o -c /home/jjh/Bot_Code/subsystems/relayBoard.cpp",
   "file": "/home/jjh/Bot_Code/subsystems/relayBoard.cpp"
+},
+{
+  "directory": "/home/jjh/Bot_Code/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK -I/home/jjh/Bot_Code/include -I/home/jjh/Bot_Code -g -std=c++17 -o CMakeFiles/Jets_Bot.dir/commands/MOVE_CMD/driveCMDs.cpp.o -c /home/jjh/Bot_Code/commands/MOVE_CMD/driveCMDs.cpp",
+  "file": "/home/jjh/Bot_Code/commands/MOVE_CMD/driveCMDs.cpp"
+},
+{
+  "directory": "/home/jjh/Bot_Code/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK -I/home/jjh/Bot_Code/include -I/home/jjh/Bot_Code -g -std=c++17 -o CMakeFiles/Jets_Bot.dir/commands/lora_command_handler.cpp.o -c /home/jjh/Bot_Code/commands/lora_command_handler.cpp",
+  "file": "/home/jjh/Bot_Code/commands/lora_command_handler.cpp"
+},
+{
+  "directory": "/home/jjh/Bot_Code/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK -I/home/jjh/Bot_Code/include -I/home/jjh/Bot_Code -g -std=c++17 -o CMakeFiles/Jets_Bot.dir/commands/lora_frame.cpp.o -c /home/jjh/Bot_Code/commands/lora_frame.cpp",
+  "file": "/home/jjh/Bot_Code/commands/lora_frame.cpp"
 }
 ]

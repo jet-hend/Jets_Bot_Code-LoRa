@@ -40,10 +40,12 @@ include_directories(
 )
 
 # Source files
-file(GLOB_RECURSE SOURCES 
+file(GLOB SUBSYSTEM_SOURCES "${PROJECT_SOURCE_DIR}/subsystems/*.cpp")
+file(GLOB_RECURSE COMMAND_SOURCES "${PROJECT_SOURCE_DIR}/commands/*.cpp")
+set(SOURCES
     "${PROJECT_SOURCE_DIR}/main.cpp"
-    "${PROJECT_SOURCE_DIR}/subsystems/*.cpp"
-    "${PROJECT_SOURCE_DIR}/commands/**/*.cpp"
+    ${SUBSYSTEM_SOURCES}
+    ${COMMAND_SOURCES}
 )
 
 add_executable(Jets_Bot ${SOURCES})
