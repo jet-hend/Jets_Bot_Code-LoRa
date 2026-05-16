@@ -1,14 +1,18 @@
 #include "subsystems/drivetrain.h"
-#include "subsystems/ESPRadio.h"
+#include "subsystems/ESPRadio.h"      // ← Fixed spelling
 #include "subsystems/customCANutil.h"
+#include "subsystems/relayBoard.h"    // ← Add this
 #include "subsystems/MPU6050util.h"
 #include "cmd_protocol.h"
 
+#include <boost/asio.hpp>             // ← Add this for io_context
 #include <chrono>
 #include <iostream>
 #include <string>
 #include <thread>
 #include <unistd.h>
+
+using boost::asio::io_context;
 
 bool ENABLE = true;
 bool ERROR = false;
