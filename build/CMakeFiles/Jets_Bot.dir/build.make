@@ -69,10 +69,24 @@ include CMakeFiles/Jets_Bot.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Jets_Bot.dir/flags.make
 
+CMakeFiles/Jets_Bot.dir/commands/MOVE_CMD/driveCMDs.cpp.o: CMakeFiles/Jets_Bot.dir/flags.make
+CMakeFiles/Jets_Bot.dir/commands/MOVE_CMD/driveCMDs.cpp.o: /home/jjh/Bot_Code/commands/MOVE_CMD/driveCMDs.cpp
+CMakeFiles/Jets_Bot.dir/commands/MOVE_CMD/driveCMDs.cpp.o: CMakeFiles/Jets_Bot.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jjh/Bot_Code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Jets_Bot.dir/commands/MOVE_CMD/driveCMDs.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Jets_Bot.dir/commands/MOVE_CMD/driveCMDs.cpp.o -MF CMakeFiles/Jets_Bot.dir/commands/MOVE_CMD/driveCMDs.cpp.o.d -o CMakeFiles/Jets_Bot.dir/commands/MOVE_CMD/driveCMDs.cpp.o -c /home/jjh/Bot_Code/commands/MOVE_CMD/driveCMDs.cpp
+
+CMakeFiles/Jets_Bot.dir/commands/MOVE_CMD/driveCMDs.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Jets_Bot.dir/commands/MOVE_CMD/driveCMDs.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jjh/Bot_Code/commands/MOVE_CMD/driveCMDs.cpp > CMakeFiles/Jets_Bot.dir/commands/MOVE_CMD/driveCMDs.cpp.i
+
+CMakeFiles/Jets_Bot.dir/commands/MOVE_CMD/driveCMDs.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Jets_Bot.dir/commands/MOVE_CMD/driveCMDs.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jjh/Bot_Code/commands/MOVE_CMD/driveCMDs.cpp -o CMakeFiles/Jets_Bot.dir/commands/MOVE_CMD/driveCMDs.cpp.s
+
 CMakeFiles/Jets_Bot.dir/main.cpp.o: CMakeFiles/Jets_Bot.dir/flags.make
 CMakeFiles/Jets_Bot.dir/main.cpp.o: /home/jjh/Bot_Code/main.cpp
 CMakeFiles/Jets_Bot.dir/main.cpp.o: CMakeFiles/Jets_Bot.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jjh/Bot_Code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Jets_Bot.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jjh/Bot_Code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Jets_Bot.dir/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Jets_Bot.dir/main.cpp.o -MF CMakeFiles/Jets_Bot.dir/main.cpp.o.d -o CMakeFiles/Jets_Bot.dir/main.cpp.o -c /home/jjh/Bot_Code/main.cpp
 
 CMakeFiles/Jets_Bot.dir/main.cpp.i: cmake_force
@@ -82,20 +96,6 @@ CMakeFiles/Jets_Bot.dir/main.cpp.i: cmake_force
 CMakeFiles/Jets_Bot.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Jets_Bot.dir/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jjh/Bot_Code/main.cpp -o CMakeFiles/Jets_Bot.dir/main.cpp.s
-
-CMakeFiles/Jets_Bot.dir/subsystems/drivetrain.cpp.o: CMakeFiles/Jets_Bot.dir/flags.make
-CMakeFiles/Jets_Bot.dir/subsystems/drivetrain.cpp.o: /home/jjh/Bot_Code/subsystems/drivetrain.cpp
-CMakeFiles/Jets_Bot.dir/subsystems/drivetrain.cpp.o: CMakeFiles/Jets_Bot.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jjh/Bot_Code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Jets_Bot.dir/subsystems/drivetrain.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Jets_Bot.dir/subsystems/drivetrain.cpp.o -MF CMakeFiles/Jets_Bot.dir/subsystems/drivetrain.cpp.o.d -o CMakeFiles/Jets_Bot.dir/subsystems/drivetrain.cpp.o -c /home/jjh/Bot_Code/subsystems/drivetrain.cpp
-
-CMakeFiles/Jets_Bot.dir/subsystems/drivetrain.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Jets_Bot.dir/subsystems/drivetrain.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jjh/Bot_Code/subsystems/drivetrain.cpp > CMakeFiles/Jets_Bot.dir/subsystems/drivetrain.cpp.i
-
-CMakeFiles/Jets_Bot.dir/subsystems/drivetrain.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Jets_Bot.dir/subsystems/drivetrain.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jjh/Bot_Code/subsystems/drivetrain.cpp -o CMakeFiles/Jets_Bot.dir/subsystems/drivetrain.cpp.s
 
 CMakeFiles/Jets_Bot.dir/subsystems/ESPRadio.cpp.o: CMakeFiles/Jets_Bot.dir/flags.make
 CMakeFiles/Jets_Bot.dir/subsystems/ESPRadio.cpp.o: /home/jjh/Bot_Code/subsystems/ESPRadio.cpp
@@ -111,19 +111,19 @@ CMakeFiles/Jets_Bot.dir/subsystems/ESPRadio.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Jets_Bot.dir/subsystems/ESPRadio.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jjh/Bot_Code/subsystems/ESPRadio.cpp -o CMakeFiles/Jets_Bot.dir/subsystems/ESPRadio.cpp.s
 
-CMakeFiles/Jets_Bot.dir/subsystems/relayBoard.cpp.o: CMakeFiles/Jets_Bot.dir/flags.make
-CMakeFiles/Jets_Bot.dir/subsystems/relayBoard.cpp.o: /home/jjh/Bot_Code/subsystems/relayBoard.cpp
-CMakeFiles/Jets_Bot.dir/subsystems/relayBoard.cpp.o: CMakeFiles/Jets_Bot.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jjh/Bot_Code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Jets_Bot.dir/subsystems/relayBoard.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Jets_Bot.dir/subsystems/relayBoard.cpp.o -MF CMakeFiles/Jets_Bot.dir/subsystems/relayBoard.cpp.o.d -o CMakeFiles/Jets_Bot.dir/subsystems/relayBoard.cpp.o -c /home/jjh/Bot_Code/subsystems/relayBoard.cpp
+CMakeFiles/Jets_Bot.dir/subsystems/MPU6050util.cpp.o: CMakeFiles/Jets_Bot.dir/flags.make
+CMakeFiles/Jets_Bot.dir/subsystems/MPU6050util.cpp.o: /home/jjh/Bot_Code/subsystems/MPU6050util.cpp
+CMakeFiles/Jets_Bot.dir/subsystems/MPU6050util.cpp.o: CMakeFiles/Jets_Bot.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jjh/Bot_Code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Jets_Bot.dir/subsystems/MPU6050util.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Jets_Bot.dir/subsystems/MPU6050util.cpp.o -MF CMakeFiles/Jets_Bot.dir/subsystems/MPU6050util.cpp.o.d -o CMakeFiles/Jets_Bot.dir/subsystems/MPU6050util.cpp.o -c /home/jjh/Bot_Code/subsystems/MPU6050util.cpp
 
-CMakeFiles/Jets_Bot.dir/subsystems/relayBoard.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Jets_Bot.dir/subsystems/relayBoard.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jjh/Bot_Code/subsystems/relayBoard.cpp > CMakeFiles/Jets_Bot.dir/subsystems/relayBoard.cpp.i
+CMakeFiles/Jets_Bot.dir/subsystems/MPU6050util.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Jets_Bot.dir/subsystems/MPU6050util.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jjh/Bot_Code/subsystems/MPU6050util.cpp > CMakeFiles/Jets_Bot.dir/subsystems/MPU6050util.cpp.i
 
-CMakeFiles/Jets_Bot.dir/subsystems/relayBoard.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Jets_Bot.dir/subsystems/relayBoard.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jjh/Bot_Code/subsystems/relayBoard.cpp -o CMakeFiles/Jets_Bot.dir/subsystems/relayBoard.cpp.s
+CMakeFiles/Jets_Bot.dir/subsystems/MPU6050util.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Jets_Bot.dir/subsystems/MPU6050util.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jjh/Bot_Code/subsystems/MPU6050util.cpp -o CMakeFiles/Jets_Bot.dir/subsystems/MPU6050util.cpp.s
 
 CMakeFiles/Jets_Bot.dir/subsystems/customCANutil.cpp.o: CMakeFiles/Jets_Bot.dir/flags.make
 CMakeFiles/Jets_Bot.dir/subsystems/customCANutil.cpp.o: /home/jjh/Bot_Code/subsystems/customCANutil.cpp
@@ -139,64 +139,64 @@ CMakeFiles/Jets_Bot.dir/subsystems/customCANutil.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Jets_Bot.dir/subsystems/customCANutil.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jjh/Bot_Code/subsystems/customCANutil.cpp -o CMakeFiles/Jets_Bot.dir/subsystems/customCANutil.cpp.s
 
-CMakeFiles/Jets_Bot.dir/subsystems/MPU6050util.cpp.o: CMakeFiles/Jets_Bot.dir/flags.make
-CMakeFiles/Jets_Bot.dir/subsystems/MPU6050util.cpp.o: /home/jjh/Bot_Code/subsystems/MPU6050util.cpp
-CMakeFiles/Jets_Bot.dir/subsystems/MPU6050util.cpp.o: CMakeFiles/Jets_Bot.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jjh/Bot_Code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Jets_Bot.dir/subsystems/MPU6050util.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Jets_Bot.dir/subsystems/MPU6050util.cpp.o -MF CMakeFiles/Jets_Bot.dir/subsystems/MPU6050util.cpp.o.d -o CMakeFiles/Jets_Bot.dir/subsystems/MPU6050util.cpp.o -c /home/jjh/Bot_Code/subsystems/MPU6050util.cpp
+CMakeFiles/Jets_Bot.dir/subsystems/drivetrain.cpp.o: CMakeFiles/Jets_Bot.dir/flags.make
+CMakeFiles/Jets_Bot.dir/subsystems/drivetrain.cpp.o: /home/jjh/Bot_Code/subsystems/drivetrain.cpp
+CMakeFiles/Jets_Bot.dir/subsystems/drivetrain.cpp.o: CMakeFiles/Jets_Bot.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jjh/Bot_Code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Jets_Bot.dir/subsystems/drivetrain.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Jets_Bot.dir/subsystems/drivetrain.cpp.o -MF CMakeFiles/Jets_Bot.dir/subsystems/drivetrain.cpp.o.d -o CMakeFiles/Jets_Bot.dir/subsystems/drivetrain.cpp.o -c /home/jjh/Bot_Code/subsystems/drivetrain.cpp
 
-CMakeFiles/Jets_Bot.dir/subsystems/MPU6050util.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Jets_Bot.dir/subsystems/MPU6050util.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jjh/Bot_Code/subsystems/MPU6050util.cpp > CMakeFiles/Jets_Bot.dir/subsystems/MPU6050util.cpp.i
+CMakeFiles/Jets_Bot.dir/subsystems/drivetrain.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Jets_Bot.dir/subsystems/drivetrain.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jjh/Bot_Code/subsystems/drivetrain.cpp > CMakeFiles/Jets_Bot.dir/subsystems/drivetrain.cpp.i
 
-CMakeFiles/Jets_Bot.dir/subsystems/MPU6050util.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Jets_Bot.dir/subsystems/MPU6050util.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jjh/Bot_Code/subsystems/MPU6050util.cpp -o CMakeFiles/Jets_Bot.dir/subsystems/MPU6050util.cpp.s
+CMakeFiles/Jets_Bot.dir/subsystems/drivetrain.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Jets_Bot.dir/subsystems/drivetrain.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jjh/Bot_Code/subsystems/drivetrain.cpp -o CMakeFiles/Jets_Bot.dir/subsystems/drivetrain.cpp.s
 
-CMakeFiles/Jets_Bot.dir/commands/MOVE_CMD/driveCMDs.cpp.o: CMakeFiles/Jets_Bot.dir/flags.make
-CMakeFiles/Jets_Bot.dir/commands/MOVE_CMD/driveCMDs.cpp.o: /home/jjh/Bot_Code/commands/MOVE_CMD/driveCMDs.cpp
-CMakeFiles/Jets_Bot.dir/commands/MOVE_CMD/driveCMDs.cpp.o: CMakeFiles/Jets_Bot.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jjh/Bot_Code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Jets_Bot.dir/commands/MOVE_CMD/driveCMDs.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Jets_Bot.dir/commands/MOVE_CMD/driveCMDs.cpp.o -MF CMakeFiles/Jets_Bot.dir/commands/MOVE_CMD/driveCMDs.cpp.o.d -o CMakeFiles/Jets_Bot.dir/commands/MOVE_CMD/driveCMDs.cpp.o -c /home/jjh/Bot_Code/commands/MOVE_CMD/driveCMDs.cpp
+CMakeFiles/Jets_Bot.dir/subsystems/relayBoard.cpp.o: CMakeFiles/Jets_Bot.dir/flags.make
+CMakeFiles/Jets_Bot.dir/subsystems/relayBoard.cpp.o: /home/jjh/Bot_Code/subsystems/relayBoard.cpp
+CMakeFiles/Jets_Bot.dir/subsystems/relayBoard.cpp.o: CMakeFiles/Jets_Bot.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jjh/Bot_Code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Jets_Bot.dir/subsystems/relayBoard.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Jets_Bot.dir/subsystems/relayBoard.cpp.o -MF CMakeFiles/Jets_Bot.dir/subsystems/relayBoard.cpp.o.d -o CMakeFiles/Jets_Bot.dir/subsystems/relayBoard.cpp.o -c /home/jjh/Bot_Code/subsystems/relayBoard.cpp
 
-CMakeFiles/Jets_Bot.dir/commands/MOVE_CMD/driveCMDs.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Jets_Bot.dir/commands/MOVE_CMD/driveCMDs.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jjh/Bot_Code/commands/MOVE_CMD/driveCMDs.cpp > CMakeFiles/Jets_Bot.dir/commands/MOVE_CMD/driveCMDs.cpp.i
+CMakeFiles/Jets_Bot.dir/subsystems/relayBoard.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Jets_Bot.dir/subsystems/relayBoard.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jjh/Bot_Code/subsystems/relayBoard.cpp > CMakeFiles/Jets_Bot.dir/subsystems/relayBoard.cpp.i
 
-CMakeFiles/Jets_Bot.dir/commands/MOVE_CMD/driveCMDs.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Jets_Bot.dir/commands/MOVE_CMD/driveCMDs.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jjh/Bot_Code/commands/MOVE_CMD/driveCMDs.cpp -o CMakeFiles/Jets_Bot.dir/commands/MOVE_CMD/driveCMDs.cpp.s
+CMakeFiles/Jets_Bot.dir/subsystems/relayBoard.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Jets_Bot.dir/subsystems/relayBoard.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jjh/Bot_Code/subsystems/relayBoard.cpp -o CMakeFiles/Jets_Bot.dir/subsystems/relayBoard.cpp.s
 
 # Object files for target Jets_Bot
 Jets_Bot_OBJECTS = \
+"CMakeFiles/Jets_Bot.dir/commands/MOVE_CMD/driveCMDs.cpp.o" \
 "CMakeFiles/Jets_Bot.dir/main.cpp.o" \
-"CMakeFiles/Jets_Bot.dir/subsystems/drivetrain.cpp.o" \
 "CMakeFiles/Jets_Bot.dir/subsystems/ESPRadio.cpp.o" \
-"CMakeFiles/Jets_Bot.dir/subsystems/relayBoard.cpp.o" \
-"CMakeFiles/Jets_Bot.dir/subsystems/customCANutil.cpp.o" \
 "CMakeFiles/Jets_Bot.dir/subsystems/MPU6050util.cpp.o" \
-"CMakeFiles/Jets_Bot.dir/commands/MOVE_CMD/driveCMDs.cpp.o"
+"CMakeFiles/Jets_Bot.dir/subsystems/customCANutil.cpp.o" \
+"CMakeFiles/Jets_Bot.dir/subsystems/drivetrain.cpp.o" \
+"CMakeFiles/Jets_Bot.dir/subsystems/relayBoard.cpp.o"
 
 # External object files for target Jets_Bot
 Jets_Bot_EXTERNAL_OBJECTS =
 
-bin/Jets_Bot: CMakeFiles/Jets_Bot.dir/main.cpp.o
-bin/Jets_Bot: CMakeFiles/Jets_Bot.dir/subsystems/drivetrain.cpp.o
-bin/Jets_Bot: CMakeFiles/Jets_Bot.dir/subsystems/ESPRadio.cpp.o
-bin/Jets_Bot: CMakeFiles/Jets_Bot.dir/subsystems/relayBoard.cpp.o
-bin/Jets_Bot: CMakeFiles/Jets_Bot.dir/subsystems/customCANutil.cpp.o
-bin/Jets_Bot: CMakeFiles/Jets_Bot.dir/subsystems/MPU6050util.cpp.o
 bin/Jets_Bot: CMakeFiles/Jets_Bot.dir/commands/MOVE_CMD/driveCMDs.cpp.o
+bin/Jets_Bot: CMakeFiles/Jets_Bot.dir/main.cpp.o
+bin/Jets_Bot: CMakeFiles/Jets_Bot.dir/subsystems/ESPRadio.cpp.o
+bin/Jets_Bot: CMakeFiles/Jets_Bot.dir/subsystems/MPU6050util.cpp.o
+bin/Jets_Bot: CMakeFiles/Jets_Bot.dir/subsystems/customCANutil.cpp.o
+bin/Jets_Bot: CMakeFiles/Jets_Bot.dir/subsystems/drivetrain.cpp.o
+bin/Jets_Bot: CMakeFiles/Jets_Bot.dir/subsystems/relayBoard.cpp.o
 bin/Jets_Bot: CMakeFiles/Jets_Bot.dir/build.make
 bin/Jets_Bot: /usr/lib/aarch64-linux-gnu/libboost_system.so.1.74.0
-bin/Jets_Bot: /home/jjh/Bot_Code/lib/x86-64/libCTRE_Phoenix.so
-bin/Jets_Bot: /home/jjh/Bot_Code/lib/x86-64/libCTRE_PhoenixCCI.so
-bin/Jets_Bot: /home/jjh/Bot_Code/lib/x86-64/libCTRE_PhoenixTools.so
+bin/Jets_Bot: /home/jjh/Bot_Code/lib/arm64/libCTRE_Phoenix.so
+bin/Jets_Bot: /home/jjh/Bot_Code/lib/arm64/libCTRE_PhoenixCCI.so
+bin/Jets_Bot: /home/jjh/Bot_Code/lib/arm64/libCTRE_PhoenixTools.so
 bin/Jets_Bot: CMakeFiles/Jets_Bot.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jjh/Bot_Code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable bin/Jets_Bot"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Jets_Bot.dir/link.txt --verbose=$(VERBOSE)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Copying Phoenix libraries"
-	/usr/bin/cmake -E copy_directory /home/jjh/Bot_Code/lib/x86-64 /home/jjh/Bot_Code/build/bin
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Copying Phoenix CTRE libraries to bin directory"
+	/usr/bin/cmake -E copy_directory /home/jjh/Bot_Code/lib/arm64 /home/jjh/Bot_Code/build/bin
 
 # Rule to build all files generated by this target.
 CMakeFiles/Jets_Bot.dir/build: bin/Jets_Bot

@@ -1,46 +1,19 @@
-DriveCommands::DriveCommands() {
-    // Constructor
-}
+#pragma once
 
-void DriveCommands::executeCommand(CommandType cmd) {
-    switch (cmd) {
-        case FORWARD:
-            moveForward();
-            break;
-        case BACKWARD:
-            moveBackward();
-            break;
-        case LEFT:
-            turnLeft();
-            break;
-        case RIGHT:
-            turnRight();
-            break;
-        case STOP:
-            stopMovement();
-            break;
-        default:
-            // Handle unknown command
-            break;
-    }
-}
+#include "cmd_protocol.h"     // This brings in MoveCMDType
 
-void DriveCommands::moveForward() {
-    // Implementation for moving forward
-}
+class DriveCommands {
+public:
+    DriveCommands();
 
-void DriveCommands::moveBackward() {
-    // Implementation for moving backward
-}
+    void executeCommand(MoveCMDType cmdType);
 
-void DriveCommands::turnLeft() {
-    // Implementation for turning left
-}
+    void moveForward();
+    void moveBackward();
+    void turnLeft();
+    void turnRight();
+    void stopMovement();
 
-void DriveCommands::turnRight() {
-    // Implementation for turning right
-}
-
-void DriveCommands::stopMovement() {
-    // Implementation for stopping
-}
+private:
+    // future private members
+};
