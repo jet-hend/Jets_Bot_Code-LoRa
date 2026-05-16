@@ -20,6 +20,16 @@ include_directories(
     ${PROJECT_SOURCE_DIR}/include
 )
 
+add_executable(ROBOTEX 
+    ${PROJECT_SOURCE_DIR}/main.cpp
+    ${PROJECT_SOURCE_DIR}/subsystems/drivetrain.cpp 
+    ${PROJECT_SOURCE_DIR}/subsystems/ESPRadio.cpp
+    ${PROJECT_SOURCE_DIR}/subsystems/relayBoard.cpp
+    ${PROJECT_SOURCE_DIR}/subsystems/customCANutil.cpp
+    ${PROJECT_SOURCE_DIR}/subsystems/MPU6050util.cpp
+    ${PROJECT_SOURCE_DIR}/commands/DirDrive.cpp 
+)
+
 # Collect all source files
 file(GLOB_RECURSE SOURCES 
     "${PROJECT_SOURCE_DIR}/main.cpp"
