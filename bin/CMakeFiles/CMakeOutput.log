@@ -208,3 +208,38 @@ int main(void)
 }
 
 
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD succeeded with the following output:
+Change Dir: /home/jjh/Bot_Code/build/CMakeFiles/CMakeScratch/TryCompile-CukW0x
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_28b0b/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_28b0b.dir/build.make CMakeFiles/cmTC_28b0b.dir/build
+gmake[1]: Entering directory '/home/jjh/Bot_Code/build/CMakeFiles/CMakeScratch/TryCompile-CukW0x'
+Building C object CMakeFiles/cmTC_28b0b.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_28b0b.dir/src.c.o -c /home/jjh/Bot_Code/build/CMakeFiles/CMakeScratch/TryCompile-CukW0x/src.c
+Linking C executable cmTC_28b0b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_28b0b.dir/link.txt --verbose=1
+/usr/bin/cc -rdynamic CMakeFiles/cmTC_28b0b.dir/src.c.o -o cmTC_28b0b 
+gmake[1]: Leaving directory '/home/jjh/Bot_Code/build/CMakeFiles/CMakeScratch/TryCompile-CukW0x'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+
