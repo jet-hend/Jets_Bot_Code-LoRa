@@ -1,0 +1,9 @@
+{
+    "files.watcherExclude": {
+        "**/build/**": true,
+        "**/.git/objects/**": true
+    },
+    "cmake.buildDirectory": "${workspaceFolder}/build",
+    "cmake.configureOnOpen": true,
+    "C_Cpp.intelliSenseEngine": "default"
+}

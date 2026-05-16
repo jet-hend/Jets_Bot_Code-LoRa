@@ -1,17 +1,15 @@
 {
     "configurations": [
         {
-            "name": "Linux",
+            "name": "Linux-Pi",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/include/ctre/phoenix/cci",
-                "${workspaceFolder}/include/subsystems"
+                "/usr/include",
+                "/usr/local/include"
             ],
-            "defines": [],
-            "compilerPath": "/usr/bin/gcc",
+            "configurationProvider": "ms-vscode.cmake-tools",
             "cStandard": "c17",
-            "cppStandard": "gnu++17",
-            "intelliSenseMode": "linux-gcc-arm64"
+            "cppStandard": "c++17"
         }
     ],
     "version": 4
