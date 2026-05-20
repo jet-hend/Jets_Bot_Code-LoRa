@@ -117,120 +117,72 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Jets_Bot
+# Target rules for targets named ROBOTEX
 
 # Build rule for target.
-Jets_Bot: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Jets_Bot
-.PHONY : Jets_Bot
+ROBOTEX: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ROBOTEX
+.PHONY : ROBOTEX
 
 # fast build rule for target.
-Jets_Bot/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Jets_Bot.dir/build.make CMakeFiles/Jets_Bot.dir/build
-.PHONY : Jets_Bot/fast
+ROBOTEX/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ROBOTEX.dir/build.make CMakeFiles/ROBOTEX.dir/build
+.PHONY : ROBOTEX/fast
 
-commands/MOVE_CMD/driveCMDs.o: commands/MOVE_CMD/driveCMDs.cpp.o
-.PHONY : commands/MOVE_CMD/driveCMDs.o
-
-# target to build an object file
-commands/MOVE_CMD/driveCMDs.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Jets_Bot.dir/build.make CMakeFiles/Jets_Bot.dir/commands/MOVE_CMD/driveCMDs.cpp.o
-.PHONY : commands/MOVE_CMD/driveCMDs.cpp.o
-
-commands/MOVE_CMD/driveCMDs.i: commands/MOVE_CMD/driveCMDs.cpp.i
-.PHONY : commands/MOVE_CMD/driveCMDs.i
-
-# target to preprocess a source file
-commands/MOVE_CMD/driveCMDs.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Jets_Bot.dir/build.make CMakeFiles/Jets_Bot.dir/commands/MOVE_CMD/driveCMDs.cpp.i
-.PHONY : commands/MOVE_CMD/driveCMDs.cpp.i
-
-commands/MOVE_CMD/driveCMDs.s: commands/MOVE_CMD/driveCMDs.cpp.s
-.PHONY : commands/MOVE_CMD/driveCMDs.s
-
-# target to generate assembly for a file
-commands/MOVE_CMD/driveCMDs.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Jets_Bot.dir/build.make CMakeFiles/Jets_Bot.dir/commands/MOVE_CMD/driveCMDs.cpp.s
-.PHONY : commands/MOVE_CMD/driveCMDs.cpp.s
-
-commands/lora_command_handler.o: commands/lora_command_handler.cpp.o
-.PHONY : commands/lora_command_handler.o
+commands/DirDrive.o: commands/DirDrive.cpp.o
+.PHONY : commands/DirDrive.o
 
 # target to build an object file
-commands/lora_command_handler.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Jets_Bot.dir/build.make CMakeFiles/Jets_Bot.dir/commands/lora_command_handler.cpp.o
-.PHONY : commands/lora_command_handler.cpp.o
+commands/DirDrive.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ROBOTEX.dir/build.make CMakeFiles/ROBOTEX.dir/commands/DirDrive.cpp.o
+.PHONY : commands/DirDrive.cpp.o
 
-commands/lora_command_handler.i: commands/lora_command_handler.cpp.i
-.PHONY : commands/lora_command_handler.i
+commands/DirDrive.i: commands/DirDrive.cpp.i
+.PHONY : commands/DirDrive.i
 
 # target to preprocess a source file
-commands/lora_command_handler.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Jets_Bot.dir/build.make CMakeFiles/Jets_Bot.dir/commands/lora_command_handler.cpp.i
-.PHONY : commands/lora_command_handler.cpp.i
+commands/DirDrive.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ROBOTEX.dir/build.make CMakeFiles/ROBOTEX.dir/commands/DirDrive.cpp.i
+.PHONY : commands/DirDrive.cpp.i
 
-commands/lora_command_handler.s: commands/lora_command_handler.cpp.s
-.PHONY : commands/lora_command_handler.s
+commands/DirDrive.s: commands/DirDrive.cpp.s
+.PHONY : commands/DirDrive.s
 
 # target to generate assembly for a file
-commands/lora_command_handler.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Jets_Bot.dir/build.make CMakeFiles/Jets_Bot.dir/commands/lora_command_handler.cpp.s
-.PHONY : commands/lora_command_handler.cpp.s
+commands/DirDrive.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ROBOTEX.dir/build.make CMakeFiles/ROBOTEX.dir/commands/DirDrive.cpp.s
+.PHONY : commands/DirDrive.cpp.s
 
-commands/lora_frame.o: commands/lora_frame.cpp.o
-.PHONY : commands/lora_frame.o
+robot.o: robot.cpp.o
+.PHONY : robot.o
 
 # target to build an object file
-commands/lora_frame.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Jets_Bot.dir/build.make CMakeFiles/Jets_Bot.dir/commands/lora_frame.cpp.o
-.PHONY : commands/lora_frame.cpp.o
+robot.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ROBOTEX.dir/build.make CMakeFiles/ROBOTEX.dir/robot.cpp.o
+.PHONY : robot.cpp.o
 
-commands/lora_frame.i: commands/lora_frame.cpp.i
-.PHONY : commands/lora_frame.i
-
-# target to preprocess a source file
-commands/lora_frame.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Jets_Bot.dir/build.make CMakeFiles/Jets_Bot.dir/commands/lora_frame.cpp.i
-.PHONY : commands/lora_frame.cpp.i
-
-commands/lora_frame.s: commands/lora_frame.cpp.s
-.PHONY : commands/lora_frame.s
-
-# target to generate assembly for a file
-commands/lora_frame.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Jets_Bot.dir/build.make CMakeFiles/Jets_Bot.dir/commands/lora_frame.cpp.s
-.PHONY : commands/lora_frame.cpp.s
-
-main.o: main.cpp.o
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Jets_Bot.dir/build.make CMakeFiles/Jets_Bot.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-.PHONY : main.i
+robot.i: robot.cpp.i
+.PHONY : robot.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Jets_Bot.dir/build.make CMakeFiles/Jets_Bot.dir/main.cpp.i
-.PHONY : main.cpp.i
+robot.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ROBOTEX.dir/build.make CMakeFiles/ROBOTEX.dir/robot.cpp.i
+.PHONY : robot.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+robot.s: robot.cpp.s
+.PHONY : robot.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Jets_Bot.dir/build.make CMakeFiles/Jets_Bot.dir/main.cpp.s
-.PHONY : main.cpp.s
+robot.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ROBOTEX.dir/build.make CMakeFiles/ROBOTEX.dir/robot.cpp.s
+.PHONY : robot.cpp.s
 
 subsystems/ESPRadio.o: subsystems/ESPRadio.cpp.o
 .PHONY : subsystems/ESPRadio.o
 
 # target to build an object file
 subsystems/ESPRadio.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Jets_Bot.dir/build.make CMakeFiles/Jets_Bot.dir/subsystems/ESPRadio.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ROBOTEX.dir/build.make CMakeFiles/ROBOTEX.dir/subsystems/ESPRadio.cpp.o
 .PHONY : subsystems/ESPRadio.cpp.o
 
 subsystems/ESPRadio.i: subsystems/ESPRadio.cpp.i
@@ -238,7 +190,7 @@ subsystems/ESPRadio.i: subsystems/ESPRadio.cpp.i
 
 # target to preprocess a source file
 subsystems/ESPRadio.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Jets_Bot.dir/build.make CMakeFiles/Jets_Bot.dir/subsystems/ESPRadio.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ROBOTEX.dir/build.make CMakeFiles/ROBOTEX.dir/subsystems/ESPRadio.cpp.i
 .PHONY : subsystems/ESPRadio.cpp.i
 
 subsystems/ESPRadio.s: subsystems/ESPRadio.cpp.s
@@ -246,7 +198,7 @@ subsystems/ESPRadio.s: subsystems/ESPRadio.cpp.s
 
 # target to generate assembly for a file
 subsystems/ESPRadio.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Jets_Bot.dir/build.make CMakeFiles/Jets_Bot.dir/subsystems/ESPRadio.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ROBOTEX.dir/build.make CMakeFiles/ROBOTEX.dir/subsystems/ESPRadio.cpp.s
 .PHONY : subsystems/ESPRadio.cpp.s
 
 subsystems/MPU6050util.o: subsystems/MPU6050util.cpp.o
@@ -254,7 +206,7 @@ subsystems/MPU6050util.o: subsystems/MPU6050util.cpp.o
 
 # target to build an object file
 subsystems/MPU6050util.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Jets_Bot.dir/build.make CMakeFiles/Jets_Bot.dir/subsystems/MPU6050util.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ROBOTEX.dir/build.make CMakeFiles/ROBOTEX.dir/subsystems/MPU6050util.cpp.o
 .PHONY : subsystems/MPU6050util.cpp.o
 
 subsystems/MPU6050util.i: subsystems/MPU6050util.cpp.i
@@ -262,7 +214,7 @@ subsystems/MPU6050util.i: subsystems/MPU6050util.cpp.i
 
 # target to preprocess a source file
 subsystems/MPU6050util.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Jets_Bot.dir/build.make CMakeFiles/Jets_Bot.dir/subsystems/MPU6050util.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ROBOTEX.dir/build.make CMakeFiles/ROBOTEX.dir/subsystems/MPU6050util.cpp.i
 .PHONY : subsystems/MPU6050util.cpp.i
 
 subsystems/MPU6050util.s: subsystems/MPU6050util.cpp.s
@@ -270,7 +222,7 @@ subsystems/MPU6050util.s: subsystems/MPU6050util.cpp.s
 
 # target to generate assembly for a file
 subsystems/MPU6050util.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Jets_Bot.dir/build.make CMakeFiles/Jets_Bot.dir/subsystems/MPU6050util.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ROBOTEX.dir/build.make CMakeFiles/ROBOTEX.dir/subsystems/MPU6050util.cpp.s
 .PHONY : subsystems/MPU6050util.cpp.s
 
 subsystems/customCANutil.o: subsystems/customCANutil.cpp.o
@@ -278,7 +230,7 @@ subsystems/customCANutil.o: subsystems/customCANutil.cpp.o
 
 # target to build an object file
 subsystems/customCANutil.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Jets_Bot.dir/build.make CMakeFiles/Jets_Bot.dir/subsystems/customCANutil.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ROBOTEX.dir/build.make CMakeFiles/ROBOTEX.dir/subsystems/customCANutil.cpp.o
 .PHONY : subsystems/customCANutil.cpp.o
 
 subsystems/customCANutil.i: subsystems/customCANutil.cpp.i
@@ -286,7 +238,7 @@ subsystems/customCANutil.i: subsystems/customCANutil.cpp.i
 
 # target to preprocess a source file
 subsystems/customCANutil.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Jets_Bot.dir/build.make CMakeFiles/Jets_Bot.dir/subsystems/customCANutil.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ROBOTEX.dir/build.make CMakeFiles/ROBOTEX.dir/subsystems/customCANutil.cpp.i
 .PHONY : subsystems/customCANutil.cpp.i
 
 subsystems/customCANutil.s: subsystems/customCANutil.cpp.s
@@ -294,7 +246,7 @@ subsystems/customCANutil.s: subsystems/customCANutil.cpp.s
 
 # target to generate assembly for a file
 subsystems/customCANutil.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Jets_Bot.dir/build.make CMakeFiles/Jets_Bot.dir/subsystems/customCANutil.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ROBOTEX.dir/build.make CMakeFiles/ROBOTEX.dir/subsystems/customCANutil.cpp.s
 .PHONY : subsystems/customCANutil.cpp.s
 
 subsystems/drivetrain.o: subsystems/drivetrain.cpp.o
@@ -302,7 +254,7 @@ subsystems/drivetrain.o: subsystems/drivetrain.cpp.o
 
 # target to build an object file
 subsystems/drivetrain.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Jets_Bot.dir/build.make CMakeFiles/Jets_Bot.dir/subsystems/drivetrain.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ROBOTEX.dir/build.make CMakeFiles/ROBOTEX.dir/subsystems/drivetrain.cpp.o
 .PHONY : subsystems/drivetrain.cpp.o
 
 subsystems/drivetrain.i: subsystems/drivetrain.cpp.i
@@ -310,7 +262,7 @@ subsystems/drivetrain.i: subsystems/drivetrain.cpp.i
 
 # target to preprocess a source file
 subsystems/drivetrain.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Jets_Bot.dir/build.make CMakeFiles/Jets_Bot.dir/subsystems/drivetrain.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ROBOTEX.dir/build.make CMakeFiles/ROBOTEX.dir/subsystems/drivetrain.cpp.i
 .PHONY : subsystems/drivetrain.cpp.i
 
 subsystems/drivetrain.s: subsystems/drivetrain.cpp.s
@@ -318,7 +270,7 @@ subsystems/drivetrain.s: subsystems/drivetrain.cpp.s
 
 # target to generate assembly for a file
 subsystems/drivetrain.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Jets_Bot.dir/build.make CMakeFiles/Jets_Bot.dir/subsystems/drivetrain.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ROBOTEX.dir/build.make CMakeFiles/ROBOTEX.dir/subsystems/drivetrain.cpp.s
 .PHONY : subsystems/drivetrain.cpp.s
 
 subsystems/relayBoard.o: subsystems/relayBoard.cpp.o
@@ -326,7 +278,7 @@ subsystems/relayBoard.o: subsystems/relayBoard.cpp.o
 
 # target to build an object file
 subsystems/relayBoard.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Jets_Bot.dir/build.make CMakeFiles/Jets_Bot.dir/subsystems/relayBoard.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ROBOTEX.dir/build.make CMakeFiles/ROBOTEX.dir/subsystems/relayBoard.cpp.o
 .PHONY : subsystems/relayBoard.cpp.o
 
 subsystems/relayBoard.i: subsystems/relayBoard.cpp.i
@@ -334,7 +286,7 @@ subsystems/relayBoard.i: subsystems/relayBoard.cpp.i
 
 # target to preprocess a source file
 subsystems/relayBoard.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Jets_Bot.dir/build.make CMakeFiles/Jets_Bot.dir/subsystems/relayBoard.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ROBOTEX.dir/build.make CMakeFiles/ROBOTEX.dir/subsystems/relayBoard.cpp.i
 .PHONY : subsystems/relayBoard.cpp.i
 
 subsystems/relayBoard.s: subsystems/relayBoard.cpp.s
@@ -342,7 +294,7 @@ subsystems/relayBoard.s: subsystems/relayBoard.cpp.s
 
 # target to generate assembly for a file
 subsystems/relayBoard.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Jets_Bot.dir/build.make CMakeFiles/Jets_Bot.dir/subsystems/relayBoard.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ROBOTEX.dir/build.make CMakeFiles/ROBOTEX.dir/subsystems/relayBoard.cpp.s
 .PHONY : subsystems/relayBoard.cpp.s
 
 # Help Target
@@ -353,19 +305,13 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... Jets_Bot"
-	@echo "... commands/MOVE_CMD/driveCMDs.o"
-	@echo "... commands/MOVE_CMD/driveCMDs.i"
-	@echo "... commands/MOVE_CMD/driveCMDs.s"
-	@echo "... commands/lora_command_handler.o"
-	@echo "... commands/lora_command_handler.i"
-	@echo "... commands/lora_command_handler.s"
-	@echo "... commands/lora_frame.o"
-	@echo "... commands/lora_frame.i"
-	@echo "... commands/lora_frame.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... ROBOTEX"
+	@echo "... commands/DirDrive.o"
+	@echo "... commands/DirDrive.i"
+	@echo "... commands/DirDrive.s"
+	@echo "... robot.o"
+	@echo "... robot.i"
+	@echo "... robot.s"
 	@echo "... subsystems/ESPRadio.o"
 	@echo "... subsystems/ESPRadio.i"
 	@echo "... subsystems/ESPRadio.s"

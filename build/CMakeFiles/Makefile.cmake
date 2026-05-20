@@ -13,13 +13,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.25.1/CMakeSystem.cmake"
   "/usr/lib/aarch64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake"
   "/usr/lib/aarch64-linux-gnu/cmake/Boost-1.74.0/BoostConfigVersion.cmake"
-  "/usr/lib/aarch64-linux-gnu/cmake/BoostDetectToolset-1.74.0.cmake"
   "/usr/lib/aarch64-linux-gnu/cmake/boost_headers-1.74.0/boost_headers-config-version.cmake"
   "/usr/lib/aarch64-linux-gnu/cmake/boost_headers-1.74.0/boost_headers-config.cmake"
-  "/usr/lib/aarch64-linux-gnu/cmake/boost_system-1.74.0/boost_system-config-version.cmake"
-  "/usr/lib/aarch64-linux-gnu/cmake/boost_system-1.74.0/boost_system-config.cmake"
-  "/usr/lib/aarch64-linux-gnu/cmake/boost_system-1.74.0/libboost_system-variant-shared.cmake"
-  "/usr/lib/aarch64-linux-gnu/cmake/boost_system-1.74.0/libboost_system-variant-static.cmake"
   "/usr/share/cmake-3.25/Modules/CMakeCCompiler.cmake.in"
   "/usr/share/cmake-3.25/Modules/CMakeCCompilerABI.c"
   "/usr/share/cmake-3.25/Modules/CMakeCInformation.cmake"
@@ -131,14 +126,14 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/3.25.1/CMakeSystem.cmake"
-  "CMakeFiles/3.25.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.25.1/CMakeCCompiler.cmake"
   "CMakeFiles/3.25.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.25.1/CMakeCCompiler.cmake"
+  "CMakeFiles/3.25.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/Jets_Bot.dir/DependInfo.cmake"
+  "CMakeFiles/ROBOTEX.dir/DependInfo.cmake"
   )
